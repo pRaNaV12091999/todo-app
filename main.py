@@ -4,13 +4,14 @@ import time
 print("enter exit to stop")
 prompt = "Type add or show or edit or complete or exit:"
 
+# time function for a timestamp
 now = time.strftime("%b %d, %Y %H:%M:%S")
 print("IT is:", now)
 
 while True:
     user_action = input(prompt)
     if user_action.startswith("add"):
-        todo = user_action[4:]+'\n'
+        todo = user_action[4:] + '\n'
 
         todos = functions.get_todos()
 
@@ -24,7 +25,7 @@ while True:
         todos = functions.get_todos('files/todos.txt')
 
         for index, items in enumerate(todos):
-            row = f"{index+1}-{items}"
+            row = f"{index + 1}-{items}"
             print(row, end="")
     elif user_action.startswith("edit"):
         try:
@@ -64,7 +65,6 @@ while True:
             continue
     else:
         print("command not understood")
-
 
 print("end of program")
 print("bye")
