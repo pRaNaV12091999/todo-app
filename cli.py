@@ -8,6 +8,7 @@ prompt = "Type add or show or edit or complete or exit:"
 now = time.strftime("%b %d, %Y %H:%M:%S")
 print("IT is:", now)
 
+
 while True:
     user_action = input(prompt)
     if user_action.startswith("add"):
